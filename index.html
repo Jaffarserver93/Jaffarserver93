@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Content</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <h1>Download Content</h1>
+    </header>
+
+    <main>
+        <section class="platform-selection">
+            <h2>Select Platform</h2>
+            <div class="platform-buttons">
+                <button class="platform-button" data-platform="youtube">YouTube</button>
+                <button class="platform-button" data-platform="instagram">Instagram</button>
+                <!-- Add more platform buttons as needed -->
+            </div>
+        </section>
+
+        <section class="content-section" id="youtube-section">
+            <h2>YouTube Content</h2>
+            <div class="content-list">
+                <!-- Content will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <section class="content-section" id="instagram-section">
+            <h2>Instagram Content</h2>
+            <div class="content-list">
+                <!-- Content will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Download Content</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
