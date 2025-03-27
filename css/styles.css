@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -18,6 +18,18 @@ header {
     padding: 1em 0;
     text-align: center;
     position: relative;
+    animation: headerAnimation 2s ease-in-out;
+}
+
+@keyframes headerAnimation {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .toggle-container {
@@ -77,6 +89,39 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
+.animated-header {
+    animation: headerTextAnimation 2s ease-in-out;
+}
+
+@keyframes headerTextAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b;
+}
+
 main {
     padding: 2em;
 }
@@ -99,16 +144,29 @@ main {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .platform-button:hover {
     background-color: #555;
+    transform: scale(1.1);
 }
 
 .content-section {
     display: none;
     margin-bottom: 2em;
+    animation: contentAnimation 1s ease-in-out;
+}
+
+@keyframes contentAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .content-section.active {
@@ -141,4 +199,33 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+    animation: footerAnimation 2s ease-in-out;
+}
+
+@keyframes footerAnimation {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.social-icons .icon img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.social-icons .icon img:hover {
+    transform: scale(1.2);
 }
