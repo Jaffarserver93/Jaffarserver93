@@ -4,10 +4,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const platformButtons = document.querySelectorAll('.platform-button');
     const contentSections = document.querySelectorAll('.content-section');
 
-    // Theme toggle
-    themeToggle.addEventListener('change', () => {
-        body.classList.toggle('dark-mode');
-    });
+    // Load header and footer
+    fetch('includes/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
+            // Re-initialize theme toggle after header is loaded
+            themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('change', () => {
+                body.classList.toggle('dark-mode');
+            });
+        });
+
+    fetch('includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        });
 
     // Platform selection
     platformButtons.forEach(button => {
