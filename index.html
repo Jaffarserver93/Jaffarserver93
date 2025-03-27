@@ -3,39 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Download Website</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Premium Content Downloader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body>
-    <div id="header-container"></div>
+<body class="min-h-screen">
+    <!-- Header -->
+    {% include "includes/header.html" %}
 
-    <main>
-        <section class="platform-selection">
-            <h2>Select Platform</h2>
-            <div class="platform-buttons">
-                <button class="platform-button" data-platform="youtube">YouTube</button>
-                <button class="platform-button" data-platform="instagram">Instagram</button>
-                <!-- Add more platform buttons as needed -->
-            </div>
-        </section>
-
-        <section class="content-section" id="youtube-section">
-            <h2>YouTube Content</h2>
-            <div class="content-list">
-                <!-- Content will be dynamically loaded here -->
-            </div>
-        </section>
-
-        <section class="content-section" id="instagram-section">
-            <h2>Instagram Content</h2>
-            <div class="content-list">
-                <!-- Content will be dynamically loaded here -->
-            </div>
-        </section>
+    <!-- Main Content -->
+    <main class="pt-24 pb-12 px-6 min-h-screen">
+        <!-- ... your existing main content ... -->
     </main>
 
-    <div id="footer-container"></div>
+    <!-- Footer -->
+    {% include "includes/footer.html" %}
 
-    <script src="js/scripts.js"></script>
+    <script src="/js/scripts.js"></script>
 </body>
 </html>
