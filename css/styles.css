@@ -1,231 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary: #6366f1;
+    --secondary: #8b5cf6;
+    --accent: #ec4899;
+}
+
+.theme-dark {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #f8fafc;
+}
+
+.theme-light {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f1f5f9;
+    --text-primary: #0f172a;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
 }
 
-body.dark-mode {
-    background-color: #333;
-    color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em 0;
-    text-align: center;
-    position: relative;
-    animation: headerAnimation 2s ease-in-out;
-}
-
-@keyframes headerAnimation {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.toggle-container {
-    position: absolute;
-    top: 1em;
-    left: 1em;
-}
-
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-}
-
-input:checked + .slider {
-    background-color: #2196F3;
-}
-
-input:checked + .slider:before {
-    transform: translateX(26px);
-}
-
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
-}
-
-.animated-header {
-    animation: headerTextAnimation 2s ease-in-out;
-}
-
-@keyframes headerTextAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ffeb3b;
-}
-
-main {
-    padding: 2em;
-}
-
-.platform-selection {
-    text-align: center;
-    margin-bottom: 2em;
-}
-
-.platform-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-}
-
-.platform-button {
-    padding: 0.5em 1em;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.platform-button:hover {
-    background-color: #555;
-    transform: scale(1.1);
-}
-
-.content-section {
-    display: none;
-    margin-bottom: 2em;
-    animation: contentAnimation 1s ease-in-out;
-}
-
-@keyframes contentAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.content-section.active {
-    display: block;
-}
-
-.content-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-}
-
-.content-item {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 1em;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.content-item:hover {
-    transform: translateY(-5px);
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    animation: footerAnimation 2s ease-in-out;
-}
-
-@keyframes footerAnimation {
-    0% {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    margin-top: 1em;
-}
-
-.social-icons .icon img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s;
-}
-
-.social-icons .icon img:hover {
-    transform: scale(1.2);
-}
+/* Add all your other CSS styles here */
